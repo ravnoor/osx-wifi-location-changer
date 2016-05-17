@@ -12,26 +12,27 @@ Mountain Lion compatible
 
 Edit locationchanger and change/add locations to be set:
 
-	# LOCATIONS 
-	Location_Automatic="Automatic"
-	Location_CompanyIntra="Company Intranet"
+	# LOCATIONS
+	Location_McGill="wpa.mcgill.ca"
+	Location_EduRoam="wpa.mcgill.ca"
+	Location_Home="openwrt/5"
 
 *That's the exact names as they appear under "Location" in OSX's System Preferences -> Network*
 
 Edit locationchanger and add/edit SSIDS to be detected:
 
 	# SSIDS
-	SSID_TelekomPublic=Telekom
-	SSID_Home=PW
-	SSID_CompanyIntra=CompanyIntraSSID
+	SSID_McGill=wpa.mcgill.ca
+	SSID_Home=openwrt/5
+	SSID_EduRoam=eduroam
 
 Edit/Add SSID -> LOCATION mapping to list:
 
 	# SSID -> LOCATION mapping
 	case $SSID in
-		$SSID_TelekomPublic ) LOCATION="$Location_Automatic";;
-		$SSID_Home          ) LOCATION="$Location_Automatic";;
-		$SSID_CompanyIntra  ) LOCATION="$Location_CompanyIntra";;
+		$SSID_McGill ) LOCATION="$Location_McGill";;
+		$SSID_Home          ) LOCATION="$Location_Home";;
+		$SSID_EduRoam  ) LOCATION="$Location_EduRoam";;
 		# ... add more here
 
 ##Installation
@@ -39,7 +40,7 @@ Edit/Add SSID -> LOCATION mapping to list:
 Execute:
 
 	./install
-	
+
 ... or do it manually:
 
 Copy these files:

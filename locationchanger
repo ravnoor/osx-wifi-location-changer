@@ -23,24 +23,25 @@ echo `date` "New SSID found: $SSID"
 # empty location var
 LOCATION=
 
-# LOCATIONS 
+# LOCATIONS
 # (use to be used Location name here)
 # =============================================
-Location_Automatic="Automatic"
-Location_CompanyIntra="Company Intranet"
+Location_McGill="wpa.mcgill.ca"
+Location_EduRoam="wpa.mcgill.ca"
+Location_Home="openwrt/5"
 
 # SSIDS
 # =====
-SSID_TelekomPublic=Telekom
-SSID_Home=HomeSSID
-SSID_CompanyIntra=CompanyIntraSSID
+SSID_McGill=wpa.mcgill.ca
+SSID_Home=openwrt/5
+SSID_EduRoam=eduroam
 
 
 # SSID -> LOCATION mapping
 case $SSID in
-	$SSID_TelekomPublic ) LOCATION="$Location_Automatic";;
-	$SSID_Home          ) LOCATION="$Location_Automatic";;
-	$SSID_CompanyIntra  ) LOCATION="$Location_CompanyIntra";;
+	$SSID_McGill ) LOCATION="$Location_McGill";;
+	$SSID_Home          ) LOCATION="$Location_Home";;
+	$SSID_EduRoam  ) LOCATION="$Location_EduRoam";;
 	# ... add more here
 esac
 	REASON="SSID changed to $SSID"
@@ -59,7 +60,7 @@ case $LOCATION in
 	$Location_Automatic )
 		# do stuff here you would do in Location_Automatic
 	;;
-	
+
 	$Location_CompanyIntra )
 		# nothing special here
 	;;
