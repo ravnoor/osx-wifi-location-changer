@@ -1,5 +1,7 @@
 #!/bin/bash
 
-sudo cp locationchanger /usr/local/bin
+sudo cp locationchanger /opt/local/bin
 cp LocationChanger.plist ~/Library/LaunchAgents/
+launchctl list locationchanger > /dev/null && \
+launchctl unload ~/Library/LaunchAgents/LocationChanger.plist
 launchctl load ~/Library/LaunchAgents/LocationChanger.plist
