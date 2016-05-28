@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 # automatically change configuration of Mac OS X based on location
 # author: Rocco Georgi <rocco@pavingways.com>
@@ -9,7 +9,7 @@
 # version: 0.4
 
 # redirect all IO to a logfile
-exec &>/usr/local/var/log/locationchanger.log
+exec &> ~/locationchanger.log
 # redirect all IO to /dev/null (comment this in if you don#t want to write to logfile)
 #exec 1>/dev/null 2>/dev/null
 

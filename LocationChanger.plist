@@ -8,8 +8,11 @@
 
     <key>ProgramArguments</key>
     <array>
-        <string>/usr/local/bin/locationchanger</string>
+        <string>/opt/local/bin/locationchanger</string>
     </array>
+
+    <key>KeepAlive</key>
+    <true/>
 
     <key>WatchPaths</key>
     <array>
